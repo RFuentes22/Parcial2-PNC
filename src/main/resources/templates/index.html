@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Bienvenido</h1>
+
+
+<button type="button" th:onclick="|window.location.href='/addCategory'|">Ingresar Categoria</button><br>
+<button type="button" th:onclick="|window.location.href='/addLibro'|">Ingresar Libro</button><br>
+<button type="button" th:onclick="|window.location.href='/listado'|">Ver Libros</button><br>
+<br><br>
+
+<p th:if="${resultado == 1}" class="mb-0">Categoria guardada con &eacute;xito</p><br/>
+<p th:if="${resultado == 2}" class="mb-0">Libro guardado con &eacute;xito</p><br/>
+</body>
+</html>

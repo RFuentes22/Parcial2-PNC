@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+		<thead>
+			<th>Titulo </th>
+			<th>Autor </th>
+			<th>ISBN</th>
+			<th>Categoria </th>
+			<th>Fecha de Ingreso </th>
+		</thead>
+		<th:block th:each="libro,row:${libros}">
+			<tr>
+				<th th:text="${libro.stitulo}">
+				<th th:text="${libro.sautor}">
+				<th th:text="${libro.sisbn}">
+				<th th:text="${libro.categoria.scategoria}">
+				<th th:text="${libro.FechaDelegate}">
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
