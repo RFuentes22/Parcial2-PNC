@@ -41,7 +41,7 @@ public class MainController {
 	@RequestMapping("/addCategory")
 	public ModelAndView insert(@Valid @ModelAttribute Categoria categoria, BindingResult result) throws ParseException {
 		ModelAndView mav = new ModelAndView();
-		// Categoria categoria = new Contribuyente();
+	
 
 		if (result.hasErrors()) {
 			mav.addObject("categoria", categoria);

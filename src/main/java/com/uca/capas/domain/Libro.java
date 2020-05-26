@@ -46,7 +46,7 @@ public class Libro {
 	@Column(name="f_ingreso")
 	private Timestamp  fingreso;
 	
-	@NotNull(message="El Campo no puede estar vacio")
+	
 	@Column(name="b_estado")
 	private Boolean	bestado;
 	
@@ -137,7 +137,7 @@ public class Libro {
 				return "";
 			}
 			else{
-				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm aa");
 				String shortdate = sdf.format(this.fingreso.getTime());
 				return shortdate;
 			}
