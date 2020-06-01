@@ -39,6 +39,24 @@ public class MainController {
 	}
 
 	@RequestMapping("/addCategory")
+	public ModelAndView addCategory() {
+		ModelAndView mav = new ModelAndView();
+		Categoria categoriaClean = new Categoria();
+		mav.addObject("categoria", categoriaClean);
+		mav.setViewName("addCategoria");
+		return mav;
+	}
+	
+	@RequestMapping("/addLibro")
+	public ModelAndView addLibro() {
+		ModelAndView mav = new ModelAndView();
+		Libro libroClean = new Libro();
+		mav.addObject("categorias", listCategorias());
+		mav.addObject("libro", libroClean);
+		mav.setViewName("addLibro");
+		return mav;
+	}
+	@RequestMapping("/addCategorys")
 	public ModelAndView insert(@Valid @ModelAttribute Categoria categoria, BindingResult result) throws ParseException {
 		ModelAndView mav = new ModelAndView();
 	
@@ -56,7 +74,7 @@ public class MainController {
 
 	}
 
-	@RequestMapping("/addLibro")
+	@RequestMapping("/addLibros")
 	public ModelAndView insert(@Valid @ModelAttribute Libro libro, BindingResult result) throws ParseException {
 		ModelAndView mav = new ModelAndView();
 		//date
